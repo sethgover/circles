@@ -52,7 +52,7 @@ int count_overlaps(int x, int y){
   {
     for(int j = -width; j < width*2; j += grid_space)
     {
-      if(dist(j,k,x,y) <= circle_diam)
+      if(dist(j,k,x+(pixel_size/2),y+(pixel_size/2)) < circle_diam)
       {
         count ++;
       }
