@@ -1,10 +1,10 @@
 color a = color(255,255,255);
 color b = color(0,0,0);
 
-int pixel_size = 4;
+int pixel_size = 2;
 int grid_space = 200;
 
-int circle_diam = 30;
+int circle_diam = 80;
 
 void setup() 
 {
@@ -15,8 +15,8 @@ void setup()
 
 void draw()
 {
-  circle_diam = int(map(mouseX, 0, width, 10, 500));
-  pixel_size = int(map(mouseY, 0, height, 2, 10));
+  circle_diam = (int(map(mouseX, 0, width, 2, 150)))*4;
+  pixel_size = (int(map(mouseY, 0, height, 1,6)))*2;
   
   for(int y = 0; y<height; y+=pixel_size){
     for(int x= 0; x<width; x+=pixel_size){
@@ -32,6 +32,16 @@ void draw()
       
     }
   }
+
+  //if(circle_diam < 1000){
+  //  circle_diam += 4;
+  //  saveFrame("circle-####.png");
+  //  if(circle_diam%200 == 0){
+  //    pixel_size += 2;
+  //  }
+  //}
+  
+  println(pixel_size + " , " + circle_diam);
 }
 
 void pixel(int x, int y, int side, boolean on)
