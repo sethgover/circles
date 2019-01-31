@@ -1,3 +1,3 @@
 # circles
 
-this is based on a concept by michael @fogleman
+based on a idea by michael fogleman
